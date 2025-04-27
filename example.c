@@ -17,6 +17,9 @@ int main(void)
     ADD_FLAG(&flag_list, FLAG("-Wextra"));
     assert(strcmp((flag_list->__next)->name, "-Wextra") == 0);
 
+    ADD_FLAG(&flag_list, FLAG("-O2"));
+    assert(strcmp((flag_list->__next)->name, "-O2") == 0);
+
     object_t target = OBJECT("test/main.c");
 
     object_t *dependencies = NULL;
